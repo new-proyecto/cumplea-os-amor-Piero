@@ -42,7 +42,7 @@ body {
 }
 
 .welcome-photo-frame {
-    width: 260px; /* Foto grande y llamativa */
+    width: 260px;
     height: 260px;
     margin: 0 auto 20px auto;
     border-radius: 50%;
@@ -85,12 +85,12 @@ body {
     box-shadow: 0 6px 20px rgba(44, 39, 35, 0.2);
     transition: transform 0.2s, background-color 0.2s;
     position: relative;
-    z-index: 10; /* Asegura que el botón responda perfectamente al toque */
+    z-index: 10;
 }
 .btn-primary:active { transform: scale(0.96); background-color: #b85d4f; }
 
 .container { width: 100%; display: flex; flex-direction: column; align-items: center; }
-.top-date { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; color: #7a7067; margin-bottom: 25px; text-align: center; }
+.top-date { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-style: italic; color: #7a7067; margin-bottom: 25px; text-align: center; }
 
 /* Polaroid carrusel */
 .polaroid-card {
@@ -106,19 +106,6 @@ body {
 .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.9s ease-in-out; }
 .slide.active { opacity: 1; }
 .slide img { width: 100%; height: 100%; object-fit: cover; }
-
-/* Foto final fija (Estática) */
-.static-image-container {
-    width: 100%;
-    height: 310px;
-    border-radius: 8px;
-    overflow: hidden;
-}
-.static-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 .polaroid-footer { display: flex; flex-direction: column; align-items: center; padding-top: 12px; }
 .dots-container { display: flex; gap: 6px; margin-bottom: 8px; }
@@ -157,23 +144,6 @@ body {
 .envelope-card.open .letter-content { display: block; animation: fadeIn 0.5s ease; }
 .letter-content h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #b85d4f; margin-bottom: 10px; font-style: italic; }
 .letter-content p { font-size: 0.9rem; line-height: 1.7; color: #4a423b; }
-
-/* Contador */
-.counter-card {
-    background: #ffffff;
-    width: 100%;
-    max-width: 330px;
-    border: 1px solid #eee8df;
-    border-radius: 12px;
-    padding: 22px 15px;
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.03);
-}
-.counter-subtitle, .counter-footer-text { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-style: italic; color: #6e645c; }
-.counter-grid { display: flex; justify-content: space-around; margin: 14px 0; }
-.time-block { display: flex; flex-direction: column; align-items: center; }
-.time-number { font-size: 1.7rem; font-weight: 600; color: #2c2723; letter-spacing: -0.5px; }
-.time-label { font-size: 0.6rem; letter-spacing: 1.5px; color: #8c8278; font-weight: 600; text-transform: uppercase; margin-top: 4px; }
 
 /* Animación de corazones por toda la pantalla */
 #hearts-container {
