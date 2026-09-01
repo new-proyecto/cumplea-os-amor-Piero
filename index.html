@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felz cumpleaños mi amor✨</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- PANTALLA DE BIENVENIDA -->
+    <div id="welcome-screen" class="screen active">
+        <div class="welcome-content">
+            <!-- FOTO ARRIBA DE LOS TEXTOS -->
+            <div class="welcome-photo-frame">
+                <img src="Foto-principal-niño.jpg" alt="Foto principal" class="welcome-photo">
+            </div>
+            
+            <h1 class="welcome-title">Feliz día mi amor✨</h1>
+            <p class="welcome-subtitle">Un año mas de mi persona favorita.❤️</p>
+            <button class="btn-primary" onclick="openGift()">Abrir detalle</button>
+        </div>
+    </div>
+
+    <!-- PANTALLA PRINCIPAL -->
+    <div id="main-screen" class="screen">
+        <!-- AUDIO DE FONDO (REEMPLAZA 'tu-musica.mp3' POR EL NOMBRE DE TU ARCHIVO DE AUDIO) -->
+        <audio id="bg-music" src="Musica-año.mp3" preload="auto" loop></audio>
+
+        <div class="container" style="padding-bottom: 40px;">
+            
+            <div class="top-date">✨ Hoy el mundo celebra que naciste, y yo celebro que seas mío. ❤️✨</div>
+
+            <!-- CARRUSEL POLAROID (DINÁMICO - 6 FOTOS) -->
+            <div class="polaroid-card">
+                <div class="slider-container">
+                    <div class="slide active"><img src="Images-3.jpg" alt="Foto 1"></div>
+                    <div class="slide"><img src="Images-6.jpg" alt="Foto 2"></div>
+                    <div class="slide"><img src="Imeges-5.jpg" alt="Foto 3"></div>
+                    <div class="slide"><img src="Images-4.jpg" alt="Foto 4"></div>
+                    <div class="slide"><img src="Images-2.jpg" alt="Foto 5"></div>
+                    <div class="slide"><img src="Images-1.jpg" alt="Foto 6"></div>
+                </div>
+                <div class="polaroid-footer">
+                    <div class="dots-container">
+                        <span class="dot active" onclick="currentSlide(0)"></span>
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                    </div>
+                    <p class="couple-names">Piero & Angi</p>
+                </div>
+            </div>
+
+            <div class="ornament">✦</div>
+
+            <!-- CARTA INTERACTIVA -->
+            <div class="envelope-card" id="envelope" onclick="openLetter(event)">
+                <div class="envelope-body" id="envelope-front">
+                    <div class="seal-badge">💌</div>
+                    <p class="envelope-text">Toca para leer una cartita</p>
+                </div>
+                <div class="letter-content" id="letter-text">
+                    <h3>Para ti, en el día de tu cumpleaños ❤️</h3>
+                    <p>
+Hoy cumples un año más de vida y, mientras pienso en qué palabras escribirte, me doy cuenta de que hay sentiments que no caben fácilmente en una carta.
+
+Llegaste a mi vida y, sin darme cuenta, te convertiste en alguien que ocupa un lugar muy especial en mi corazón. Contigo he aprendido que el amor no solamente está en los días bonitos, en las risas o en los momentos perfectos; también está en aprender a entendernos, en tener paciencia, en permanecer y en seguir eligiéndonos cuando las cosas no salen como esperamos.
+
+No quiero desearte solamente que seas feliz hoy. Quiero desearte una vida que te haga sentir orgulloso de la persona que eres. Que encuentres motivos para sonreír incluso en los días difíciles, que nunca pierdas tus sueños y que tengas la fuerza necesaria para luchar por cada uno de ellos.
+
+Y si la vida me permite seguir caminando a tu lado, quiero estar ahí para verlo. Quiero ser esa persona que celebre tus triunfos con el mismo orgullo que tú, que te abrace cuando necesites sentir que no estás solo y que pueda compartir contigo esas pequeñas cosas que, con el tiempo, terminan convirtiéndose en los recuerdos más importantes.
+
+Quizás no todo en nuestra historia ha sido perfecto, pero precisamente por eso la siento nuestra. Hemos tenido momentos que me han hecho reír hasta dolerme la barriga, momentos que guardaré para siempre y también momentos que nos han puesto a prueba. Y a pesar de todo, hay algo que permanece: el cariño enorme que siento por ti y las ganas de seguir escribiendo nuestra historia.
+
+Hoy solo quiero que mires todo lo que has avanzado y que recuerdes que todavía tienes muchísimo por vivir, aprender y conseguir. No dejes nunca de creer en ti. Yo veo en ti muchas cosas bonitas, incluso aquellas que quizás tú mismo algunas veces olvidas que tienes.
+
+Gracias por existir, por haber llegado a mi vida y por todos los momentos que hemos compartido. Gracias por ser tú, con tus virtudes, tus defectos, tus silencios, tus ocurrencias y esa manera tan tuya de ser.
+
+En tu cumpleaños no te prometo una historia perfecta, porque ninguna lo es. Te deseo algo mucho más bonito: una historia verdadera, llena de momentos que algún día podamos recordar y decir “mira todo lo que vivimos juntos”.
+
+Feliz cumpleaños, mi amor. ❤️🎂
+
+Que Dios cuide siempre de ti, ilumine tus decisiones, cumpla los deseos que guardas en silencio y te dé muchos años más para seguir descubriendo todo lo bonito que la vida tiene preparado para ti.
+
+Y ojalá, entre todas esas cosas bonitas que te esperan, yo pueda seguir estando ahí.
+
+Te amo muchísimo, en todas las vidas amor mío. ❤️</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Contenedor global de corazones -->
+    <div id="hearts-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
